@@ -39,8 +39,7 @@ class FakeWebcam:
         self._settings.type = _v4l2.V4L2_BUF_TYPE_VIDEO_OUTPUT
 
         # Hack
-        V4L2_PIX_FMT_ABGR32 = _v4l2.v4l2_fourcc("A", "R", "2", "4")
-        self._settings.fmt.pix.pixelformat = V4L2_PIX_FMT_ABGR32
+        self._settings.fmt.pix.pixelformat = _v4l2.V4L2_PIX_FMT_ABGR32
 
         self._settings.fmt.pix.width = width
         self._settings.fmt.pix.height = height
